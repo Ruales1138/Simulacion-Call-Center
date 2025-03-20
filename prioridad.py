@@ -33,7 +33,12 @@ def definir_prioridad(mensajes: list):
         mensajes[i].texto = mensajes[i].texto.replace('.', '')
         mensajes[i].texto = mensajes[i].texto.replace('?', '')
         mensajes[i].texto = mensajes[i].texto.replace('¿', '')
-        print(mensajes[i])
+
+        palabras = mensajes[i].texto.split()
+        for j in range((len(palabras))):
+            print(palabras[j])
+
+
     
     #palabras = texto.split()
     #for i in range(len(palabras)):
