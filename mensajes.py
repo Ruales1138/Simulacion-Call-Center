@@ -2,18 +2,21 @@ from textos import textos
 
 
 class Mensaje:
-    def __init__(self, texto: str, prioridad: int):
+    def __init__(self, texto: str, prioridad: int, longitud_mensaje: int):
         self.texto: str = texto
         self.prioridad: int = prioridad
+        self.longitud_mensaje: int = longitud_mensaje
         
     def __repr__(self):
-        return f'{self.texto} {self.prioridad}'
+        return f'Pioridad: {self.prioridad}; Longitud: {self.longitud_mensaje}'
         
 
 def convertir_a_mensaje(textos):
     mensajes = []
     for i in range(len(textos)):
-        mensaje = Mensaje(textos[i], 0)
+        longitud_mensaje = len(textos[i].split())
+
+        mensaje = Mensaje(textos[i], 0, longitud_mensaje)
         mensajes.append(mensaje)
     return mensajes
 
