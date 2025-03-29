@@ -13,7 +13,7 @@ class Mensaje:
 def convertir_a_mensaje(textos):
     mensajes = []
     for i in range(len(textos)):
-        mensaje = Mensaje(textos[i], 1)
+        mensaje = Mensaje(textos[i], 0)
         mensajes.append(mensaje)
     return mensajes
 

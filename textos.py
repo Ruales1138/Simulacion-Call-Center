@@ -1,5 +1,8 @@
 textos = [
     'Tengo una emergencia, hay un fallo crítico en el sistema y no responde.',
+    "El sistema ha estado funcionando con normalidad durante el día.",
+    "Quisiera saber más detalles sobre la nueva funcionalidad agregada.",
+    "Me gustaría recibir información sobre las mejores prácticas de seguridad.",
     'Es urgente, necesito hacer una consulta sobre mi servicio.',
     'Hay un fallo crítico, el servidor dejó de funcionar y tenemos un problema con el acceso.',
     'Esto es una emergencia, el sistema no procesa los pagos y hay un problema con la base de datos.',
@@ -19,7 +22,4 @@ textos = [
     'Tengo un problema, mi línea telefónica no permite hacer llamadas.',
     'Fallo crítico, el sistema dejó de funcionar y está afectando todas las operaciones.',
     'Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.',
-    "El sistema ha estado funcionando con normalidad durante el día.",
-    "Quisiera saber más detalles sobre la nueva funcionalidad agregada.",
-    "Me gustaría recibir información sobre las mejores prácticas de seguridad."
 ]
