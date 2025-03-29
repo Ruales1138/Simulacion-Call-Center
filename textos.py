@@ -18,5 +18,8 @@ textos = [
     'Emergencia, el sistema de alarmas no responde y hay un fallo crítico en la central.',
     'Tengo un problema, mi línea telefónica no permite hacer llamadas.',
     'Fallo crítico, el sistema dejó de funcionar y está afectando todas las operaciones.',
-    'Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.'
+    'Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.',
+    "El sistema ha estado funcionando con normalidad durante el día.",
+    "Quisiera saber más detalles sobre la nueva funcionalidad agregada.",
+    "Me gustaría recibir información sobre las mejores prácticas de seguridad."
 ]

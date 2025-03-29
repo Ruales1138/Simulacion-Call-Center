@@ -28,25 +28,16 @@ def definir_prioridad(mensajes: list):
     }
     
     for i in range(len(mensajes)):
-        mensajes[i].texto = mensajes[i].texto.lower()
-        mensajes[i].texto = mensajes[i].texto.replace(',', '')
-        mensajes[i].texto = mensajes[i].texto.replace('.', '')
-        mensajes[i].texto = mensajes[i].texto.replace('?', '')
-        mensajes[i].texto = mensajes[i].texto.replace('¿', '')
+        texto_copia = mensajes[i].texto
+        texto_copia = texto_copia.lower()
+        texto_copia = texto_copia.replace(',', '')
+        texto_copia = texto_copia.replace('.', '')
+        texto_copia = texto_copia.replace('?', '')
+        texto_copia = texto_copia.replace('¿', '')
 
-        palabras = mensajes[i].texto.split()
-        for j in range((len(palabras))):
-            print(palabras[j])
+        for clave, valor in palabras_clave.items():
+            if clave in texto_copia:
+                mensajes[i].prioridad += valor
 
-
-    
-    #palabras = texto.split()
-    #for i in range(len(palabras)):
-    #    for clave, valor in palabras_clave.items():
-    #        if palabras[i] == clave:
-    #            print('lo encontre')
-    #            
-    #    print(palabras[i])
-    #return palabras
 
 definir_prioridad(mensajes)
