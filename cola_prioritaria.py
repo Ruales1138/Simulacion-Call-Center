@@ -7,6 +7,7 @@ class PriorityQueue:
         self.queue = []
         self.priority = priority
         self.tipo = tipo
+        self.niveles_orden = {'experto': 3, 'intermedio': 2, 'basico': 1}
         
     def enqueue(self, elemento):
 
@@ -33,23 +34,21 @@ class PriorityQueue:
                     self.queue.append(elemento)
 
         if self.tipo == 'agentes':
-
             if self.priority == 'min':
                 if len(self.queue) == 0:
                     self.queue.append(elemento)
                 else:
                     for i in range(len(self.queue)):
-                        if elemento.nivel_experiencia < self.queue[i].nivel_experiencia:
+                        if self.niveles_orden[elemento.nivel_experiencia] < self.niveles_orden[self.queue[i].nivel_experiencia]:
                             self.queue.insert(i, elemento)
                             return
                     self.queue.append(elemento)
-
             if self.priority == 'max':
                 if len(self.queue) == 0:
                     self.queue.append(elemento)
                 else:
                     for i in range(len(self.queue)):
-                        if elemento.nivel_experiencia > self.queue[i].nivel_experiencia:
+                        if self.niveles_orden[elemento.nivel_experiencia] > self.niveles_orden[self.queue[i].nivel_experiencia]:
                             self.queue.insert(i, elemento)
                             return
                     self.queue.append(elemento)

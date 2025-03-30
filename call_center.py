@@ -13,11 +13,11 @@ def definir_tiempo(fila_mensajes, fila_agentes):
         peso_palabras_clave = mensaje.prioridad
         experiencia = agente.nivel_experiencia
         
-        if experiencia == 1:
+        if experiencia == 'basico':
             factor_de_nivel = 1
-        if experiencia == 2:
+        if experiencia == 'intermedio':
             factor_de_nivel = 0.25
-        if experiencia == 3:
+        if experiencia == 'experto':
             factor_de_nivel = 0.5
 
         tiempo_estimado = (longitud_mensaje / 10) + (peso_palabras_clave / 2)
