@@ -1,7 +1,5 @@
 from mensajes import mensajes
 from agentes import agentes
-print(agentes)
-print('---------')
 
 
 class PriorityQueue:
