@@ -1,8 +1,7 @@
-from cola_prioritaria import mensajes
-print(mensajes)
+from cola_prioritaria import fila_mensajes, fila_agentes
+print(fila_mensajes.queue)
 print('-----')
-from agentes import agentes
-print(agentes)
+print(fila_agentes.queue)
 
 
         

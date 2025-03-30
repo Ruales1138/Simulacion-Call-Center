@@ -14,7 +14,7 @@ class Agente:
 
 def crear_agentes(cantidad):
     agentes = []
-    niveles_de_experiencia = ['basico', 'intermedio', 'experto']
+    niveles_de_experiencia = [1, 2, 3]
     estados = ['ocupado', 'disponible']
 
     for i in range(cantidad):
