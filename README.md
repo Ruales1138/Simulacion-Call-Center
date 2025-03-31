@@ -39,4 +39,22 @@ Cada agente tendrá características propias que afectarán el tiempo que tarda 
 
 Cada agente debe ser representado como un objeto con atributos específicos, incluyendo:
 
+- id: Identificador único del agente.
+- nivel_experiencia: Puede ser básico, intermedio o experto.
+- estado: Puede estar ocupado o disponible.
+- tiempo_de_respuesta: Calculado con base en su experiencia y la dificultad del mensaje.
+
+### Ejemplo de niveles de experiencia y su impacto en el tiempo de respuesta:
+Nivel
+Reducción en tiempo de respuesta
+Básico
+Sin reducción (100%)
+Intermedio
+Reduce 25% del tiempo esperado
+Experto
+Reduce 50% del tiempo esperado
+
+
+
+
 
