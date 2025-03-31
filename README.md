@@ -45,14 +45,10 @@ Cada agente debe ser representado como un objeto con atributos específicos, inc
 - tiempo_de_respuesta: Calculado con base en su experiencia y la dificultad del mensaje.
 
 ### Ejemplo de niveles de experiencia y su impacto en el tiempo de respuesta:
-Nivel
-Reducción en tiempo de respuesta
-Básico
-Sin reducción (100%)
-Intermedio
-Reduce 25% del tiempo esperado
-Experto
-Reduce 50% del tiempo esperado
+Reducción en tiempo de respuesta:
+- Básico: Sin reducción (100%)
+- Intermedio: Reduce 25% del tiempo esperado
+- Experto: Reduce 50% del tiempo esperado
 
 
 
