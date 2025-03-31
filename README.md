@@ -78,6 +78,17 @@ Donde:
 - Se debe gestionar la sincronización para evitar que varios agentes intenten tomar el mismo caso.
 - ⚠️ Nota: Quienes elijan esta opción estarán eximidos de la nota de seguimiento del bloque de Pilas y Colas.
 
+## 6. Ciclo de Operación Continua
+- Se seguirán leyendo mensajes nuevos de la carpeta en intervalos regulares.
+- Los mensajes serán analizados, clasificados y encolados automáticamente.
+- El sistema no se detiene, solo finaliza si el usuario lo indica.
+
+## ⚠️ Restricción Importante
+- 🚫 No se permite el uso de librerías externas para la creación y gestión de la cola de prioridad.
+- Los estudiantes deben implementar su propia estructura de datos para la cola de prioridad, asegurándose de manejar correctamente la inserción y extracción de elementos con base en su prioridad.
+- Pueden utilizar listas enlazadas implementadas manualmente o cualquier otra estructura personalizada que respete el comportamiento de las colas de prioridad, pero no se permite el uso de módulos como queue.PriorityQueue o heapq.
+
+
 
 
 
