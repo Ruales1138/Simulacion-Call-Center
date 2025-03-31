@@ -49,6 +49,10 @@ Reducción en tiempo de respuesta:
 - Básico: Sin reducción (100%)
 - Intermedio: Reduce 25% del tiempo esperado
 - Experto: Reduce 50% del tiempo esperado
+Se debe calcular el tiempo estimado para cada agente basándose en:
+- Dificultad del caso (longitud y palabras clave del mensaje).
+- Experiencia del agente (afecta el tiempo final de resolución).
+
 
 
 
