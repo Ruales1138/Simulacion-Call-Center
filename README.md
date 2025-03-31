@@ -83,10 +83,17 @@ Donde:
 - Los mensajes serán analizados, clasificados y encolados automáticamente.
 - El sistema no se detiene, solo finaliza si el usuario lo indica.
 
-## ⚠️ Restricción Importante
+# ⚠️ Restricción Importante
 - 🚫 No se permite el uso de librerías externas para la creación y gestión de la cola de prioridad.
 - Los estudiantes deben implementar su propia estructura de datos para la cola de prioridad, asegurándose de manejar correctamente la inserción y extracción de elementos con base en su prioridad.
 - Pueden utilizar listas enlazadas implementadas manualmente o cualquier otra estructura personalizada que respete el comportamiento de las colas de prioridad, pero no se permite el uso de módulos como queue.PriorityQueue o heapq.
+
+# Entregables y  Sustentación
+- Código fuente del sistema implementado en Python con TypeHints.
+- Sustentación individual sobre la solución base y las modificaciones planteadas para el ejercicio de sustentación, incluyendo: 
+-- Explicación detallada de la heurística de prioridad y la heurística de tiempo de respuesta.
+- Fecha de entrega y sustentación: primera clase de semana 6
+
 
 
 
