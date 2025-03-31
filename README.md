@@ -11,6 +11,4 @@ Los agentes tienen diferentes niveles de experiencia y responderán los casos en
 El sistema funcionará de manera continua a demanda, leyendo nuevos mensajes desde una carpeta y encolándolos con una prioridad dinámica basada en su contenido.
 
 # Requisitos del Sistema
-1. Procesamiento de mensajes de clientes
-
-
+# 1. Procesamiento de mensajes de clientes
