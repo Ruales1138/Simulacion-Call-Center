@@ -65,6 +65,19 @@ Donde:
 - factor_de_nivel depende del nivel del agente (1.0 para básico, 0.75 para intermedio, 0.5 para experto).
 
 ## 4. Uso de Colas de Prioridad
+- Se usará una PriorityQueue para organizar las llamadas.
+- Los mensajes con mayor prioridad serán atendidos primero.
+- Si hay varios agentes disponibles, el más experimentado tomará el siguiente caso.
+
+## 5. Simulación de Atención de Agentes
+### Opción 1 (Básica con sleep)
+- Los agentes simplemente esperan time.sleep(tiempo_estimado) para simular el tiempo de atención.
+- Una vez terminado, toman el siguiente caso en la cola.
+### Opción 2 (Avanzada con Hilos)
+- Cada agente funciona en un hilo separado, permitiendo que varios atiendan llamadas simultáneamente.
+- Se debe gestionar la sincronización para evitar que varios agentes intenten tomar el mismo caso.
+- ⚠️ Nota: Quienes elijan esta opción estarán eximidos de la nota de seguimiento del bloque de Pilas y Colas.
+
 
 
 
