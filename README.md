@@ -59,6 +59,13 @@ tiempo_estimado = (longitud_mensaje / 10) + (peso_palabras_clave / 2)
 
 ajuste_por_experiencia = tiempo_estimado * factor_de_nivel
 
+Donde:
+- longitud_mensaje es el número de palabras en el mensaje.
+- peso_palabras_clave es la suma de los valores del diccionario de palabras clave.
+- factor_de_nivel depende del nivel del agente (1.0 para básico, 0.75 para intermedio, 0.5 para experto).
+
+## 4. Uso de Colas de Prioridad
+
 
 
 
