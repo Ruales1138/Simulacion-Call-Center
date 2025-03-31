@@ -8,10 +8,10 @@ class Mensaje:
         self.longitud_mensaje: int = longitud_mensaje
         
     def __repr__(self):
-        return f'Pioridad: {self.prioridad}; Longitud: {self.longitud_mensaje}'
+        return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
         
 
-def convertir_a_mensaje(textos):
+def convertir_a_mensaje(textos: list[str]) -> list[Mensaje]:
     mensajes = []
     for i in range(len(textos)):
         longitud_mensaje = len(textos[i].split())
@@ -24,7 +24,7 @@ def convertir_a_mensaje(textos):
 mensajes = convertir_a_mensaje(textos)
 
 
-def definir_prioridad(mensajes: list):
+def definir_prioridad(mensajes: list[Mensaje]) -> None:
     palabras_clave = {
         "emergencia": 10, "urgente": 8, "fallo crítico": 9,
         "problema": 5, "consulta": 2, "duda": 1

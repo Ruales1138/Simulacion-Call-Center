@@ -3,13 +3,13 @@ from agentes import agentes
 
 
 class PriorityQueue:
-    def __init__(self, priority, tipo):
-        self.queue = []
-        self.priority = priority
-        self.tipo = tipo
+    def __init__(self, priority: str, tipo: str):
+        self.queue: list = []
+        self.priority: str = priority
+        self.tipo: str = tipo
         self.niveles_orden = {'experto': 3, 'intermedio': 2, 'basico': 1}
         
-    def enqueue(self, elemento):
+    def enqueue(self, elemento: object):
 
         if self.tipo == 'mensajes':
 
@@ -60,14 +60,14 @@ class PriorityQueue:
         return self.queue[0]
         
 
-def organizar_mensajes(mensajes):
+def organizar_mensajes(mensajes: list[object]) -> PriorityQueue:
     fila_mensajes = PriorityQueue('max', 'mensajes')
     for i in range(len(mensajes)):
         fila_mensajes.enqueue(mensajes[i])
     return fila_mensajes
 
 
-def organizar_agentes(agentes):
+def organizar_agentes(agentes: list[object]) -> PriorityQueue:
     fila_agentes = PriorityQueue('max', 'agentes')
     for i in range(len(agentes)):
         fila_agentes.enqueue(agentes[i])
