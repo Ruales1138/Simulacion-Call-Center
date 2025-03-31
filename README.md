@@ -35,7 +35,7 @@ Los agentes son los encargados de atender los mensajes en la medida en que se de
 
 Cada agente tendrá características propias que afectarán el tiempo que tarda en atender un caso.
 
-## Creación de Objetos de Tipo Agente:
+### Creación de Objetos de Tipo Agente:
 
 Cada agente debe ser representado como un objeto con atributos específicos, incluyendo:
 
