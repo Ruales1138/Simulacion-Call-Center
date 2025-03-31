@@ -1,8 +1,9 @@
 from cola_prioritaria import fila_mensajes, fila_agentes
+import time
 print(fila_mensajes.queue)
-print('-----')
+print('----------------------------------------------------------')
 print(fila_agentes.queue)
-print('-----')
+print('----------------------------------------------------------')
 
 
 def definir_tiempo(fila_mensajes, fila_agentes):
@@ -11,7 +12,7 @@ def definir_tiempo(fila_mensajes, fila_agentes):
     else:
         rango = len(fila_agentes.queue)
 
-    for i in range(rango):
+    for _ in range(rango):
         mensaje = fila_mensajes.dequeue()
         agente = fila_agentes.dequeue()
         longitud_mensaje = mensaje.longitud_mensaje
@@ -28,9 +29,14 @@ def definir_tiempo(fila_mensajes, fila_agentes):
         tiempo_estimado = (longitud_mensaje / 10) + (peso_palabras_clave / 2)
         ajuste_por_experiencia = tiempo_estimado * factor_de_nivel
         
+        print('Mensaje:')
+        print(mensaje.texto)
         print(mensaje)
+        print('Agente:')
         print(agente)
-        print(ajuste_por_experiencia)
+        print(f'Tiempo de espera: {ajuste_por_experiencia}')
+        print('----------------------------------------------------------')
+        time.sleep(ajuste_por_experiencia)
 
 
 definir_tiempo(fila_mensajes, fila_agentes)

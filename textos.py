@@ -23,3 +23,11 @@ textos = [
     'Fallo crítico, el sistema dejó de funcionar y está afectando todas las operaciones.',
     'Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.',
 ]
+
+# import time
+
+# for i in range(10, -1, -1):
+#     print(f"\rContador: {i} ", end="", flush=True)
+#     time.sleep(1)
+
+# print("\n¡Tiempo terminado!")
