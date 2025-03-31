@@ -54,6 +54,12 @@ Se debe calcular el tiempo estimado para cada agente basándose en:
 - Dificultad del caso (longitud y palabras clave del mensaje).
 - Experiencia del agente (afecta el tiempo final de resolución).
 
+### Ejemplo de fórmula de tiempo de atención:
+tiempo_estimado = (longitud_mensaje / 10) + (peso_palabras_clave / 2)
+
+ajuste_por_experiencia = tiempo_estimado * factor_de_nivel
+
+
 
 
 
