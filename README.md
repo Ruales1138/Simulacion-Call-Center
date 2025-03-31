@@ -30,7 +30,9 @@ palabras_clave = {
 - Este valor continuo determinará la posición del mensaje en la cola de prioridad.
 
 # 3. Gestión de Agentes de Atención
+
 Los agentes son los encargados de atender los mensajes en la medida en que se desocupen.
+
 Cada agente tendrá características propias que afectarán el tiempo que tarda en atender un caso.
 
 ### Creación de Objetos de Tipo Agente:
