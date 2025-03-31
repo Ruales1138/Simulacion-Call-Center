@@ -90,8 +90,7 @@ Donde:
 
 # Entregables y  Sustentación
 - Código fuente del sistema implementado en Python con TypeHints.
-- Sustentación individual sobre la solución base y las modificaciones planteadas para el ejercicio de sustentación, incluyendo: 
--- Explicación detallada de la heurística de prioridad y la heurística de tiempo de respuesta.
+- Sustentación individual sobre la solución base y las modificaciones planteadas para el ejercicio de sustentación, incluyendo: Explicación detallada de la heurística de prioridad y la heurística de tiempo de respuesta.
 - Fecha de entrega y sustentación: primera clase de semana 6
 
 
