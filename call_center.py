@@ -22,7 +22,7 @@ def definir_tiempo(fila_mensajes: object, fila_agentes: object) -> None:
         if experiencia == 'basico':
             factor_de_nivel = 1
         if experiencia == 'intermedio':
-            factor_de_nivel = 0.25
+            factor_de_nivel = 0.75
         if experiencia == 'experto':
             factor_de_nivel = 0.5
 
@@ -40,6 +40,7 @@ def definir_tiempo(fila_mensajes: object, fila_agentes: object) -> None:
 
 
 definir_tiempo(fila_mensajes, fila_agentes)
+
 print(fila_mensajes.queue)
 print('-----')
 print(fila_agentes.queue)

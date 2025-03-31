@@ -29,4 +29,4 @@ def crear_agentes(cantidad: int) -> list[Agente]:
     return agentes
 
 
-agentes = crear_agentes(10)
+agentes = crear_agentes(3)
