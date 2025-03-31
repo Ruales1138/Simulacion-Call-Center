@@ -17,3 +17,15 @@ El sistema funcionará de manera continua a demanda, leyendo nuevos mensajes des
 - Cada mensaje tendrá un nivel de prioridad basado en su contenido.
 - La prioridad será un valor continuo, calculado con una heurística basada en la presencia de palabras clave.
 
+# 2. Cálculo de Prioridad del Mensaje
+- Se implementará una heurística personalizada que evalúe la urgencia de cada mensaje.
+- Se usará un diccionario de palabras clave, donde cada término tiene un peso específico.
+- La prioridad se calculará sumando los valores de las palabras encontradas en el mensaje.
+- Ejemplo de diccionario de palabras clave:
+palabras_clave = {
+    "emergencia": 10, "urgente": 8, "fallo crítico": 9,
+    "problema": 5, "consulta": 2, "duda": 1
+}
+- Se debe recorrer el contenido del mensaje y sumar los valores encontrados para determinar la prioridad.
+- Este valor continuo determinará la posición del mensaje en la cola de prioridad.
+
