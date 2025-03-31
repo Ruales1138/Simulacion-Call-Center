@@ -21,8 +21,7 @@ El sistema funcionará de manera continua a demanda, leyendo nuevos mensajes des
 - Se implementará una heurística personalizada que evalúe la urgencia de cada mensaje.
 - Se usará un diccionario de palabras clave, donde cada término tiene un peso específico.
 - La prioridad se calculará sumando los valores de las palabras encontradas en el mensaje.
-- Ejemplo de diccionario de palabras clave:
-  
+- Ejemplo de diccionario de palabras clave: 
 palabras_clave = {
     "emergencia": 10, "urgente": 8, "fallo crítico": 9,
     "problema": 5, "consulta": 2, "duda": 1
