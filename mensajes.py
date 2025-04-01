@@ -1,11 +1,5 @@
 import time
 
-#time.sleep(10)
-numero = 3
-with open(f"textos_{numero}.txt", "r", encoding="utf-8") as archivo:
-    textos = archivo.readlines()
-
-
 class Mensaje:
     def __init__(self, texto: str, prioridad: int, longitud_mensaje: int):
         self.texto: str = texto
@@ -14,6 +8,12 @@ class Mensaje:
         
     def __repr__(self):
         return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
+    
+
+def buscar_textos(numero):
+    with open(f"textos_{numero}.txt", "r", encoding="utf-8") as archivo:
+        textos = archivo.readlines()
+    return textos
         
 
 def convertir_a_mensaje(textos: list[str]) -> list[Mensaje]:
@@ -26,6 +26,7 @@ def convertir_a_mensaje(textos: list[str]) -> list[Mensaje]:
     return mensajes
 
 
+textos = buscar_textos(3)
 mensajes = convertir_a_mensaje(textos)
 
 
