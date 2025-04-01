@@ -1,4 +1,7 @@
-from textos import textos
+#from textos import textos
+
+with open("textos.txt", "r", encoding="utf-8") as archivo:
+    textos = archivo.readlines()
 
 
 class Mensaje:
