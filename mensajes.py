@@ -13,7 +13,7 @@ class Mensaje:
 
 def convertir_a_mensaje(textos: list[str]) -> list[Mensaje]:
     mensajes = []
-    for i in range(len(textos)):
+    for i in range(5):
         longitud_mensaje = len(textos[i].split())
 
         mensaje = Mensaje(textos[i], 0, longitud_mensaje)

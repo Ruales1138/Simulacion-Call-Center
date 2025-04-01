@@ -34,24 +34,7 @@ class PriorityQueue:
                     self.queue.append(elemento)
 
         if self.tipo == 'agentes':
-            if self.priority == 'min':
-                if len(self.queue) == 0:
-                    self.queue.append(elemento)
-                else:
-                    for i in range(len(self.queue)):
-                        if self.niveles_orden[elemento.nivel_experiencia] < self.niveles_orden[self.queue[i].nivel_experiencia]:
-                            self.queue.insert(i, elemento)
-                            return
-                    self.queue.append(elemento)
-            if self.priority == 'max':
-                if len(self.queue) == 0:
-                    self.queue.append(elemento)
-                else:
-                    for i in range(len(self.queue)):
-                        if self.niveles_orden[elemento.nivel_experiencia] > self.niveles_orden[self.queue[i].nivel_experiencia]:
-                            self.queue.insert(i, elemento)
-                            return
-                    self.queue.append(elemento)
+            self.queue.append(elemento)
     
     def dequeue(self):
         return self.queue.pop(0)
