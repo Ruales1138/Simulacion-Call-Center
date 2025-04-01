@@ -1,6 +1,8 @@
-#from textos import textos
+import time
 
-with open("textos.txt", "r", encoding="utf-8") as archivo:
+#time.sleep(10)
+numero = 3
+with open(f"textos_{numero}.txt", "r", encoding="utf-8") as archivo:
     textos = archivo.readlines()
 
 
@@ -16,10 +18,10 @@ class Mensaje:
 
 def convertir_a_mensaje(textos: list[str]) -> list[Mensaje]:
     mensajes = []
-    for i in range(5):
+    for i in range(len(textos)):
         longitud_mensaje = len(textos[i].split())
 
-        mensaje = Mensaje(textos[i], 0, longitud_mensaje)
+        mensaje = Mensaje(textos[i].strip(), 0, longitud_mensaje)
         mensajes.append(mensaje)
     return mensajes
 

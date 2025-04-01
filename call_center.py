@@ -7,10 +7,6 @@ print('----------------------------------------------------------')
 
 
 def definir_tiempo(fila_mensajes: object, fila_agentes: object) -> None:
-    # if len(fila_mensajes.queue) <= len(fila_agentes.queue):
-    #     rango = len(fila_mensajes.queue)
-    # else:
-    #     rango = len(fila_agentes.queue)
 
     for _ in range(len(fila_mensajes.queue)):
         mensaje = fila_mensajes.dequeue()
