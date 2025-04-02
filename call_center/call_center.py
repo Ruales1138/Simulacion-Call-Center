@@ -1,9 +1,12 @@
+import sys
+sys.path.append('call_center')
+
 from mensajes import crear_mensajes
 from agentes import crear_agentes
 from cola_prioritaria import crear_colas
 import time
 
-mensajes = crear_mensajes(3)
+mensajes = crear_mensajes()
 agentes = crear_agentes(3)
 fila_mensajes, fila_agentes = crear_colas(mensajes, agentes)
 

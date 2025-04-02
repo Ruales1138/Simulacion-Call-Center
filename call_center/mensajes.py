@@ -1,5 +1,3 @@
-#import time
-
 class Mensaje:
 
     def __init__(self, texto: str, prioridad: int, longitud_mensaje: int):
@@ -11,10 +9,10 @@ class Mensaje:
         return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
     
 
-def crear_mensajes(numero_de_archivo):
+def crear_mensajes(numero_de_archivo = 3):
 
     def buscar_textos(numero):
-        with open(f"textos_{numero}.txt", "r", encoding="utf-8") as archivo:
+        with open(f"datos/textos_{numero}.txt", "r", encoding="utf-8") as archivo:
             textos = archivo.readlines()
         return textos
     
