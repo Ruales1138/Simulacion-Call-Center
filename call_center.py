@@ -1,5 +1,12 @@
-from cola_prioritaria import fila_mensajes, fila_agentes
+from mensajes import crear_mensajes
+from agentes import crear_agentes
+from cola_prioritaria import crear_colas
 import time
+
+mensajes = crear_mensajes(3)
+agentes = crear_agentes(3)
+fila_mensajes, fila_agentes = crear_colas(mensajes, agentes)
+
 print(fila_mensajes.queue)
 print('----------------------------------------------------------')
 print(fila_agentes.queue)

@@ -1,3 +1,5 @@
 Tengo un problema, mi línea telefónica no permite hacer llamadas.
 Fallo crítico, el sistema dejó de funcionar y está afectando todas las operaciones.
 Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.
+¿Me pueden ayudar? No puedo acceder a la base de datos y el sistema no responde.
+Es una emergencia, los usuarios no pueden iniciar sesión y el servicio está caído.
