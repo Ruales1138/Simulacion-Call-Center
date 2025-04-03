@@ -9,10 +9,10 @@ class Mensaje:
         return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
     
 
-def crear_mensajes(numero_de_archivo = 3):
+def crear_mensajes(numero_de_archivo):
 
-    def buscar_textos(numero):
-        with open(f"datos/textos_{numero}.txt", "r", encoding="utf-8") as archivo:
+    def buscar_textos(numero_de_archivo):
+        with open(f"datos/textos_{numero_de_archivo}.txt", "r", encoding="utf-8") as archivo:
             textos = archivo.readlines()
         return textos
     
