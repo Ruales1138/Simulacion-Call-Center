@@ -9,7 +9,7 @@ class Mensaje:
         return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
     
 
-def crear_mensajes(numero_de_archivo):
+def crear_mensajes(numero_de_archivo: int) -> list[Mensaje]:
 
     def buscar_textos(numero_de_archivo):
         with open(f"datos/textos_{numero_de_archivo}.txt", "r", encoding="utf-8") as archivo:

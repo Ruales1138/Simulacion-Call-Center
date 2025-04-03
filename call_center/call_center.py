@@ -19,7 +19,6 @@ def ejecutar_call_center(numero_de_archivo):
     print(fila_agentes.queue)
     print('----------------------------------------------------------')
 
-
     def definir_tiempo(fila_mensajes: object, fila_agentes: object) -> None:
 
         for _ in range(len(fila_mensajes.queue)):
@@ -48,7 +47,6 @@ def ejecutar_call_center(numero_de_archivo):
             print('----------------------------------------------------------')
             #time.sleep(ajuste_por_experiencia)
             fila_agentes.enqueue(agente)
-
 
     definir_tiempo(fila_mensajes, fila_agentes)
 
