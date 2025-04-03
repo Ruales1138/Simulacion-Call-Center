@@ -3,17 +3,20 @@ sys.path.append('call_center')
 
 from mensajes import crear_mensajes
 from agentes import crear_agentes
-from cola_prioritaria import crear_colas
+from cola_prioritaria import organizar_mensajes, organizar_agentes
 import time
 import os
 
 agentes = crear_agentes(3)
+fila_agentes = organizar_agentes(agentes)
 
 def ejecutar_call_center(numero_de_archivo):
 
     mensajes = crear_mensajes(numero_de_archivo)
-    fila_mensajes, fila_agentes = crear_colas(mensajes, agentes)
+    fila_mensajes = organizar_mensajes(mensajes)
 
+    print(f'📂 Archivo {numero_de_archivo}')
+    print('----------------------------------------------------------')
     print(fila_mensajes.queue)
     print('----------------------------------------------------------')
     print(fila_agentes.queue)
@@ -45,7 +48,7 @@ def ejecutar_call_center(numero_de_archivo):
             print(agente)
             print(f'Tiempo de espera: {ajuste_por_experiencia}')
             print('----------------------------------------------------------')
-            #time.sleep(ajuste_por_experiencia)
+            time.sleep(ajuste_por_experiencia)
             fila_agentes.enqueue(agente)
 
     definir_tiempo(fila_mensajes, fila_agentes)
@@ -61,7 +64,6 @@ def contar_archivos(carpeta):
 
 ruta = "datos"
 numero_de_archivos = contar_archivos(ruta)
-print(numero_de_archivos)
 
 for i in range(numero_de_archivos):
     ejecutar_call_center(i+1)

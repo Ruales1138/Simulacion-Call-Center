@@ -39,21 +39,15 @@ class PriorityQueue:
         return self.queue[0]
         
 
-def crear_colas(mensajes, agentes):
 
-    def organizar_mensajes(mensajes: list[object]) -> PriorityQueue:
-        fila_mensajes = PriorityQueue('max', 'mensajes')
-        for i in range(len(mensajes)):
-            fila_mensajes.enqueue(mensajes[i])
-        return fila_mensajes
+def organizar_mensajes(mensajes: list[object]) -> PriorityQueue:
+    fila_mensajes = PriorityQueue('max', 'mensajes')
+    for i in range(len(mensajes)):
+        fila_mensajes.enqueue(mensajes[i])
+    return fila_mensajes
 
-    def organizar_agentes(agentes: list[object]) -> PriorityQueue:
-        fila_agentes = PriorityQueue('max', 'agentes')
-        for i in range(len(agentes)):
-            fila_agentes.enqueue(agentes[i])
-        return fila_agentes
-
-    fila_mensajes = organizar_mensajes(mensajes)
-    fila_agentes = organizar_agentes(agentes)
-
-    return fila_mensajes, fila_agentes
+def organizar_agentes(agentes: list[object]) -> PriorityQueue:
+    fila_agentes = PriorityQueue('max', 'agentes')
+    for i in range(len(agentes)):
+        fila_agentes.enqueue(agentes[i])
+    return fila_agentes
