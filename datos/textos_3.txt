@@ -3,3 +3,8 @@ Fallo crítico, el sistema dejó de funcionar y está afectando todas las operac
 Necesito ayuda, esto es urgente porque hay un problema con la conexión de red.
 ¿Me pueden ayudar? No puedo acceder a la base de datos y el sistema no responde.
 Es una emergencia, los usuarios no pueden iniciar sesión y el servicio está caído.
+Hay un fallo crítico, el servidor dejó de funcionar y tenemos un problema con el acceso.
+Esto es una emergencia, el sistema no procesa los pagos y hay un problema con la base de datos.
+Necesito ayuda, tengo una duda sobre la configuración del sistema.
+Mi conexión está fallando, esto es urgente porque afecta mi trabajo.
+El sistema de facturación no está funcionando.

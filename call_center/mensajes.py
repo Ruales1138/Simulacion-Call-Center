@@ -6,7 +6,7 @@ class Mensaje:
         self.longitud_mensaje: int = longitud_mensaje
         
     def __repr__(self):
-        return f'Pioridad: {self.prioridad}, Longitud: {self.longitud_mensaje}'
+        return f'Pioridad: {self.prioridad}'
     
 
 def crear_mensajes(numero_de_archivo: int) -> list[Mensaje]:

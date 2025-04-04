@@ -2,7 +2,7 @@ import sys
 sys.path.append('call_center')
 from mensajes import crear_mensajes
 from agentes import crear_agentes
-from cola_prioritaria import organizar_mensajes, organizar_agentes
+from cola_prioritaria import organizar_mensajes, organizar_agentes, PriorityQueue
 import time
 import os
 
@@ -22,6 +22,65 @@ def ejecutar_call_center(numero_de_archivo):
     print('----------------------------------------------------------')
     print(fila_agentes.queue)
     print('----------------------------------------------------------')
+
+    def buscar_mas_cantidad(fila_mensajes):
+        cola_aux = PriorityQueue('max', 'mensajes')
+        contador = 1
+        numero_actual = 0
+        max = [0, 0]
+        numero_anterior = 0
+
+        for _ in range(len(fila_mensajes)):
+            mensaje_actual = fila_mensajes.dequeue()
+            numero_actual = mensaje_actual.prioridad
+            cola_aux.enqueue(mensaje_actual)
+            if numero_actual == numero_anterior:
+                contador += 1
+                numero_anterior = numero_actual
+                if contador > max[1]:
+                    max[0] = numero_actual
+                    max[1] = contador
+            else:
+                contador = 1
+                numero_anterior = numero_actual
+
+        return max, cola_aux
+
+    max, cola_aux = buscar_mas_cantidad(fila_mensajes)
+    print(max)
+    fila_mensajes = cola_aux
+
+    def filtrar_cola(fila_mensajes, max):
+        cola_aux_1 = PriorityQueue('max', 'mensajes')
+        cola_aux_2 = PriorityQueue('max', 'mensajes')
+        cola_aux_3 = PriorityQueue('max', 'mensajes')
+
+        for _ in range(len(fila_mensajes)):
+            mensaje_actual = fila_mensajes.dequeue()
+            numero_actual = mensaje_actual.prioridad
+            if numero_actual == max[0]:
+                cola_aux_2.enqueue(mensaje_actual)
+            else:
+                cola_aux_1.enqueue(mensaje_actual)
+
+
+        primer_mensaje = cola_aux_2.dequeue()
+        ultimo_mensaje = cola_aux_2.dequeue()
+
+        for _ in range(len(cola_aux_2)):
+            ultimo_mensaje = cola_aux_2.dequeue()
+
+        cola_aux_3.enqueue(primer_mensaje)
+        cola_aux_3.enqueue(ultimo_mensaje)
+
+        return cola_aux_1, cola_aux_3
+    
+    cola_aux_1, cola_aux_3 =filtrar_cola(fila_mensajes, max)
+    print(cola_aux_3.queue)
+    print('----------------------------------------------------------')
+
+    fila_mensajes = cola_aux_3
+
 
     def definir_tiempo(fila_mensajes: object, fila_agentes: object) -> None:
 
@@ -53,11 +112,13 @@ def ejecutar_call_center(numero_de_archivo):
             fila_agentes.enqueue(agente)
 
     definir_tiempo(fila_mensajes, fila_agentes)
+    fila_mensajes = cola_aux_1
 
     print(fila_mensajes.queue)
     print('----------------------------------------------------------')
     print(fila_agentes.queue)
     print('----------------------------------------------------------')
+
 
 
 def contar_archivos(carpeta):

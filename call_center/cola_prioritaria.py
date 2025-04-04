@@ -37,6 +37,9 @@ class PriorityQueue:
     
     def fist(self):
         return self.queue[0]
+    
+    def __len__(self):
+        return len(self.queue)
         
 
 def organizar_mensajes(mensajes: list[object]) -> PriorityQueue:
