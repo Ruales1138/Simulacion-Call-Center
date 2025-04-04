@@ -39,12 +39,12 @@ class PriorityQueue:
         return self.queue[0]
         
 
-
 def organizar_mensajes(mensajes: list[object]) -> PriorityQueue:
     fila_mensajes = PriorityQueue('max', 'mensajes')
     for i in range(len(mensajes)):
         fila_mensajes.enqueue(mensajes[i])
     return fila_mensajes
+
 
 def organizar_agentes(agentes: list[object]) -> PriorityQueue:
     fila_agentes = PriorityQueue('max', 'agentes')

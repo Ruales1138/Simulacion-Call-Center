@@ -1,14 +1,15 @@
 import sys
 sys.path.append('call_center')
-
 from mensajes import crear_mensajes
 from agentes import crear_agentes
 from cola_prioritaria import organizar_mensajes, organizar_agentes
 import time
 import os
 
+
 agentes = crear_agentes(3)
 fila_agentes = organizar_agentes(agentes)
+
 
 def ejecutar_call_center(numero_de_archivo):
 
@@ -62,8 +63,7 @@ def ejecutar_call_center(numero_de_archivo):
 def contar_archivos(carpeta):
     return len([f for f in os.listdir(carpeta) if os.path.isfile(os.path.join(carpeta, f))])
 
-ruta = "datos"
-numero_de_archivos = contar_archivos(ruta)
+numero_de_archivos = contar_archivos('datos')
 
 for i in range(numero_de_archivos):
     ejecutar_call_center(i+1)
